@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jianghu personal pages</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html{
+				width: 100vw;
+				height: 100vh;
+				scrollbar-width: none;
+				overflow-y: hidden;
+				overflow-x: hidden;
+			}
+			body{
+				position: relative;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(135deg,#ff2c76,#6d45ff);
+			}
+			::-webkit-scrollbar{
+				width: 0;
+				height: 0;
+			}
+			#imgbox{
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			#imgbox img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				max-width: 100%;
+				height: auto;
+				transition: opacity 0.5s;
+				-webkit-transition: opacity  0.5s; /* Safari */
+				-moz-transition: opacity  0.5s; /*firfox*/
+			}
+			#imgbox #image1{
+				opacity: 1;
+			}
+			#conbox{
+				display: flex;
+				flex-direction: row;
+				position: absolute;
+				z-index: 100;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.container{
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				padding-top: 10%;
+				
+			}
+			#container1{
+				/* backdrop-filter: blur(10px);
+				background-color: rgba(0,0,0,0.2); */
+				/* padding-top: 10%; */
+				padding-left: 10%;
+			}
+			#container2{
+				/* padding-left: 5%; */
+			}
+			#title{
+				display: flex;
+				flex-direction: row;
+				padding-bottom: 30px;
+			}
+			#title img{
+				width: 150px;
+				height: 150px;
+				border-radius: 20px;
+				box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+							0 2px 2px rgba(0,0,0,0.11), 
+							0 4px 4px rgba(0,0,0,0.11), 
+							0 6px 8px rgba(0,0,0,0.11),
+							0 8px 16px rgba(0,0,0,0.11);
+			}
+			#title>span{
+				padding-left: 30px;
+			}
+			#title>span>h2{
+				font: 600 48px "思源雅黑";
+				color: #fff;
+				letter-spacing: 20px;
+				padding-bottom: 20px;
+			}
+			#title>span>div{
+				padding-bottom: 20px;
+			}
+			#title>span>div>span{
+				padding: 5px 10px;
+				font: 400 16px "思源雅黑";
+				color: #fff;
+				letter-spacing: 2px;
+				border-radius: 10px;
+				background-color: rgba(0,0,0,0.3);
+				backdrop-filter: blur(10px);
+			}
+			#title>span>p{
+				font: 400 14px "思源雅黑";
+				color: #fff;
+				letter-spacing: 2px;
+			}
+			#he-plugin-standard{
+				 box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+				              0 2px 2px rgba(0,0,0,0.15), 
+				              0 4px 4px rgba(0,0,0,0.15), 
+				              0 8px 8px rgba(0,0,0,0.15);
+			}
+			#he-plugin-standard::before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				backdrop-filter: blur(20px);
+				background-color: rgba(255,255,255,0.1);
+			}
+			.common{
+				width: 500px;
+				border-radius: 10px;
+				backdrop-filter: blur(20px);
+				background-color: rgba(255,255,255,0.1);
+				box-shadow: 0 1px 1px rgba(0,0,0,0.15),
+				             0 2px 2px rgba(0,0,0,0.15), 
+				             0 4px 4px rgba(0,0,0,0.15), 
+				             0 8px 8px rgba(0,0,0,0.15);
+			}
+			#social{
+				height: 100px;
+				margin-top: 30px;
+	
+			}
+			
+			#text1{
+				height: 150px;
+			}
+			#music{
+				height: 100px;
+				margin-top: 30px;
+			}
+			#calender{
+				height: 150px;
+				margin-top: 30px;
+			}
+			
+			@media screen and (max-width: 1400px) {
+				#conbox{
+					flex-direction: column;
+				}
+				#container2{
+					padding-left: 10%;
+				}
+				html{
+					scrollbar-width: 2px;
+					/* overflow-y: hidden; */
+					overflow-x: hidden;
+				}
+				::-webkit-scrollbar{
+					width: 2px;
+					height: auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="imgbox">
+			<img name="m1" id="image1" src="https://z4a.net/images/2023/02/02/wallhaven-weqmkp_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/daisy_field_flower_dark_background_125105_2560x1440.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-x66z7d_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/wallhaven-g7elo3_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-jxx5zp_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/wallhaven-e7kejr_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/wallhaven-m9veoy_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/t015843fb0611232593_1.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/wallhaven-57e317_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/110b3adc405d89fd5f4c0c386585d5f9--1723280224_1.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/t01e0a6c29ff347881b_1.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-1pp9vg_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/02/wallhaven-8owwjy_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-2y18l9_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-yxx3vl_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-9dd32x_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-767z23_3840x21601.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-dp635m_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/05/wallhaven-y8x5jd_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/07/wallhaven-4d9mxg_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/07/wallhaven-d6883j_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/07/wallhaven-o38xw5_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/07/wallhaven-q2kkwr_3840x2160.jpg" alt="#">
+			<img name="m1" src="https://z4a.net/images/2023/02/07/wallhaven-rrqq1q_3840x2160.jpg" alt="#">
+		</div>
+		
+		<div id="conbox">
+			<div id="container1" class="container">
+				<div id="title">
+					<img src="https://z4a.net/images/2023/02/02/jianghu.png" alt="#">
+					<span>
+						<h2>江湖</h2>
+						<div>
+							<span>张家辰</span>
+							<span>22岁</span>
+						</div>
+						<p>走不出自己的执念，到哪里都是囚徒</p>
+					</span>
+				</div>
+				<div id="he-plugin-standard"></div>
+				<div id="social" class="common">
+					
+				</div>
+			</div>
+			
+			<div id="container2" class="container">
+				<div id="text1" class="common"></div>
+				<div id="music" class="common"></div>
+				<div id="calender" class="common"></div>
+			</div>
+		</div>
+		<script>
+		WIDGET = {
+		  "CONFIG": {
+		      "layout": "1",
+		      "width": "500",
+		      "height": "150",
+		      "background": "5",
+		      "dataColor": "FFFFFF",
+		      "borderRadius": "10",
+		      "key": "e2d056938a5740e59fdf2559cce58512"
+		    }
+		}
+		</script>
+		<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+		<script type="text/javascript">
+			var i=0;
+			var strname=document.getElementsByName('m1');
+			//背景切换函数，
+			function clicked(){
+				i++;
+				if(i>strname.length-1){
+					strname[i-1].style.opacity='0';
+					i=0;
+					strname[i].style.opacity='1';
+				}
+				else{
+					strname[i-1].style.opacity='0';
+					strname[i].style.opacity='1';
+				}
+			}
+			//时间调用函数
+			var setimage=setInterval(function(){clicked()},10000);
+		</script>
+	</body>
+</html>
